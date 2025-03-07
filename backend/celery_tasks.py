@@ -6,7 +6,7 @@ from asgiref.sync import async_to_sync
 
 c_app= Celery()
 
-c_app.config_from_object('backend.config')
+c_app.config_from_object('config')
 
 
 @c_app.task()
