@@ -1,0 +1,123 @@
+GET http://127.0.0.1:8000/greet?name=xyz&age=212
+
+###
+
+POST http://127.0.0.1:8000/create_book
+Content-Type: application/json
+
+{
+    "title": "WEB OF FACES"
+}
+
+###
+GET http://127.0.0.1:8000/api/v1/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidmlraG5lc2hwaWxsYWlAZ21haWwuY29tIiwidXNlcl91aWQiOiJiYjY1NDBiZi0xOTU2LTRhODEtYmZhMS02NTQwYmMxYTU4NDgiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDEzMzgwOTAuNTIxNTAzLCJqdGkiOiI0ZTM1MGFlYS03NTlmLTQ5ZTQtYjE2ZC1jYmVjM2Q1NjJlNzEiLCJyZWZyZXNoIjpmYWxzZX0.SezJA0Gso92BOJKOD8hxzdWC3ZcRyvfP7WE1VL2R9BU
+
+###
+GET http://127.0.0.1:8000/api/v1/books/user/aacf33a4-d3bb-4fba-ab65-ab74ec76becd
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidmlraG5lc2hwaWxsYWlAZ21haWwuY29tIiwidXNlcl91aWQiOiJiYjY1NDBiZi0xOTU2LTRhODEtYmZhMS02NTQwYmMxYTU4NDgiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDEzMzI4NTIuMDM2ODQ4LCJqdGkiOiJhOTNjYjZlNi04NjA3LTQwYzQtODUzZC02NmU3ZDVhOGVmMTAiLCJyZWZyZXNoIjpmYWxzZX0.g_r8Be3-qDNuWXJEwxFC3nDR1hk7FLruj6DfFzws0Ng
+###
+
+POST  http://127.0.0.1:8000/api/v1/books
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidGVzdEB4eXouY29tIiwidXNlcl91aWQiOiJhYWNmMzNhNC1kM2JiLTRmYmEtYWI2NS1hYjc0ZWM3NmJlY2QiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDA2NTE2NzMuMzY2NDc4LCJqdGkiOiIwYzA0M2U2MS0yMGRlLTQwNzctOWJiNy04NmQ3MzU1ZDAwYjMiLCJyZWZyZXNoIjpmYWxzZX0.ftScuVjr4_iaoNzduhKwf6byVg51M4v22wMk_jGqnZA
+
+{
+    "title": "You Don't Know ",
+    "author": "Kyle Simpson",
+    "publisher": "O'Reilly Media",
+    "published_date": "2014-03-20",
+    "page_count": 98,
+    "language": "English"
+}
+
+
+
+
+
+
+
+###
+GET http://127.0.0.1:8000/api/v1/books/dc44b0f1-f31c-450b-869f-67a92039b448
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidmlraG5lc2hwaWxsYWlAZ21haWwuY29tIiwidXNlcl91aWQiOiJiYjY1NDBiZi0xOTU2LTRhODEtYmZhMS02NTQwYmMxYTU4NDgiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDEzMzMwODMuNjMwMTc1LCJqdGkiOiIwODdmMDlkMC0yMWY4LTQ0OWYtOWU2MS02ZDMxZWQxMDA4M2IiLCJyZWZyZXNoIjpmYWxzZX0.FlijoFrAETlJACjk_hRVPj3ZrxXfcB4kr4kdVOnYDLI
+
+###
+
+PATCH http://127.0.0.1:8000/api/v1/books/c8e936e5-3492-4f2d-a075-cf3533a7630f
+Content-Type: application/json
+
+{
+    "title": "Random name"
+}
+
+
+###
+
+DELETE http://127.0.0.1:8000/api/v1/books/d257af1c-0c87-451c-86b7-46cfff4282e0
+
+
+
+###
+
+POST http://127.0.0.1:8000/api/v1/auth/signup
+Content-Type: application/json
+
+{"email": "vikhneshpillai@gmail.com", "password": "@Vikku11122002", "username": "VikhneshVijay"}
+
+
+
+###
+
+POST http://127.0.0.1:8000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "username": "VikhneshVijay",
+    "password": "@Vikku11122002"
+
+}
+
+
+###
+
+
+GET http://127.0.0.1:8000/api/v1/auth/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidmlraG5lc2hwaWxsYWlAZ21haWwuY29tIiwidXNlcl91aWQiOiJiYjY1NDBiZi0xOTU2LTRhODEtYmZhMS02NTQwYmMxYTU4NDgiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDEzMzc4MzQuMTk3MTMzLCJqdGkiOiIxZDNkMDE3Yy1lMjkwLTRkMmQtYTY4YS0yNWQwMTZjZGVlY2UiLCJyZWZyZXNoIjpmYWxzZX0.YTwY58AMKLAsgtBAzK7i9HJV6-MxyN3eCjfr7vrplGU
+###
+
+GET  http://127.0.0.1:8000/api/v1/auth/refresh_token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidGVzdEB4eXouY29tIiwidXNlcl91aWQiOiJhYWNmMzNhNC1kM2JiLTRmYmEtYWI2NS1hYjc0ZWM3NmJlY2QifSwiZXhwIjoxNzQwNzQ3NDY5LjI1Njg0NiwianRpIjoiNTA0NzVhYzQtOWNjNS00YTE0LTljNjUtNzQ4ZjcwNThhMzY4IiwicmVmcmVzaCI6dHJ1ZX0.5qpLZnBrt0ucCZBKJhGmnud1X_EbeQiaUgzfMfeuPtQ
+
+
+
+
+###
+
+GET http://127.0.0.1:8000/api/v1/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidGVzdEB4eXouY29tIiwidXNlcl91aWQiOiJhYWNmMzNhNC1kM2JiLTRmYmEtYWI2NS1hYjc0ZWM3NmJlY2QiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDA2NjI3NDAuMTU4NDY2LCJqdGkiOiI1NjI5Y2Q0Zi1iZWE4LTQ4MGQtYTE1Yy1iZDA1YTE4YmQ1NmEiLCJyZWZyZXNoIjpmYWxzZX0._WDqToWSkyGbq1DNmmUDngHI_yP5YDHEMPOrF6-C2J4
+
+
+###
+POST  http://127.0.0.1:8000/api/v1/reviews/book/dc44b0f1-f31c-450b-869f-67a92039b448
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidmlraG5lc2hwaWxsYWlAZ21haWwuY29tIiwidXNlcl91aWQiOiJiYjY1NDBiZi0xOTU2LTRhODEtYmZhMS02NTQwYmMxYTU4NDgiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDEzMzI4NTIuMDM2ODQ4LCJqdGkiOiJhOTNjYjZlNi04NjA3LTQwYzQtODUzZC02NmU3ZDVhOGVmMTAiLCJyZWZyZXNoIjpmYWxzZX0.g_r8Be3-qDNuWXJEwxFC3nDR1hk7FLruj6DfFzws0Ng
+Content-Type: application/json
+
+
+{
+    "rating": 4,
+    "review_text": "❤️❤️❤️❤️"
+}
+
+###
+
+POST  http://127.0.0.1:8000/api/v1/auth/send_mail
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidGVzdEB4eXouY29tIiwidXNlcl91aWQiOiJhYWNmMzNhNC1kM2JiLTRmYmEtYWI2NS1hYjc0ZWM3NmJlY2QiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDA3MzUyMTEuMTYwNzkxLCJqdGkiOiIxMGM4ODI2Yi01YTJmLTRlODktYjRjZi02MWViYjFlMzBkZjYiLCJyZWZyZXNoIjpmYWxzZX0.rnvPYiCfAwZUTGwlXz5hvn7hXQJ32w3pvdj_fn48p3M
+Content-Type: application/json
+
+{
+    "email_addresses": ["vikhneshvijay11@gmail.com"]
+}
+###
+
+GET  http://127.0.0.1:8000/api/v1/auth/verify/eyJlbWFpbCI6InZpa2huZXNodmlqYXkxMUBnbWFpbC5jb20ifQ.Z8F3Xg.4iaxCF8tsnoEYI5hupe04K6FNrk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoidGVzdEB4eXouY29tIiwidXNlcl91aWQiOiJhYWNmMzNhNC1kM2JiLTRmYmEtYWI2NS1hYjc0ZWM3NmJlY2QiLCJyb2xlIjoidXNlciJ9LCJleHAiOjE3NDA3MzUyMTEuMTYwNzkxLCJqdGkiOiIxMGM4ODI2Yi01YTJmLTRlODktYjRjZi02MWViYjFlMzBkZjYiLCJyZWZyZXNoIjpmYWxzZX0.rnvPYiCfAwZUTGwlXz5hvn7hXQJ32w3pvdj_fn48p3M
